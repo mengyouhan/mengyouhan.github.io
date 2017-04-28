@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="0d"/>
+  <meta name="description" content="Linux 后台执行"/>
 
 
 
+
+  <meta name="keywords" content="vim,linux," />
 
 
 
@@ -29,18 +31,20 @@
 
 
 
-<link rel="canonical" href="mengyouhan.github.io/archives/2017/"/>
+<link rel="canonical" href="mengyouhan.github.io/2017/04/28/linux2/"/>
 
 
-<meta name="description" content="0d">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mengyouhan">
-<meta property="og:url" content="mengyouhan.github.io/archives/2017/index.html">
+<meta name="description" content="怎能止于ssh终端">
+<meta name="keywords" content="vim,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 后台执行">
+<meta property="og:url" content="mengyouhan.github.io/2017/04/28/linux2/index.html">
 <meta property="og:site_name" content="mengyouhan">
-<meta property="og:description" content="0d">
+<meta property="og:description" content="怎能止于ssh终端">
+<meta property="og:updated_time" content="2017-04-28T13:00:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mengyouhan">
-<meta name="twitter:description" content="0d">
+<meta name="twitter:title" content="Linux 后台执行">
+<meta name="twitter:description" content="怎能止于ssh终端">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
@@ -69,11 +73,7 @@
 
 
 
-    <title>
-  
-    Archives · mengyouhan
-  
-</title>
+    <title> Linux 后台执行 · mengyouhan </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -194,236 +194,127 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux 后台执行
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年4月28日
+        </span>
+      </div>
+    </header>
+
     
-      
-        <div class="archive-title">
-          <h2 class="archive-name"> All </h2>
-          <span class="archive-post-counter">
-            10 Posts In Total
-          </span>
-        </div>
-      
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#脱离终端"><span class="toc-text">脱离终端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nohup-amp"><span class="toc-text">nohup &</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定时任务-crontab"><span class="toc-text">定时任务 crontab</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>怎能止于ssh终端</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="脱离终端"><a href="#脱离终端" class="headerlink" title="脱离终端"></a>脱离终端</h2><h3 id="nohup-amp"><a href="#nohup-amp" class="headerlink" title="nohup &amp;"></a>nohup &amp;</h3><p>nohup python3 /root/last_pa.py &amp;</p>
+<h3 id="定时任务-crontab"><a href="#定时任务-crontab" class="headerlink" title="定时任务 crontab"></a>定时任务 crontab</h3><p>#打开定时任务配置文件<br>sudo crontab -e<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 每分钟执行一次</div><div class="line">*/1 * * * *</div><div class="line"># 每天的早上六点到八点之间，每隔3分钟执行一次</div><div class="line">*/3 6-8 * * *</div><div class="line"># 每分钟执行一次 python3 /root/text.py 输出信息到/root/text.log</div><div class="line">*/1 * * * * python3 /root/text.py  &gt;&gt; /root/text.log</div><div class="line"># 五个星号表示不同的执行单位(分、时、日、月、年)，反斜线表示频率</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
 
     
       
-        
-        
+      
 
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>mengyouhan</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="mengyouhan.github.io">mengyouhan.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="mengyouhan.github.io/2017/04/28/linux2/">mengyouhan.github.io/2017/04/28/linux2/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
         
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2017</h2>
+          <div class="post-tags">
+            
+              <a href="/tags/vim/">vim</a>
+            
+              <a href="/tags/linux/">linux</a>
+            
           </div>
         
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/linux2/" class="archive-post-link">
-            Linux 后台执行
-          </a>
-        </span>
-      </div>
+        
+        
+  <nav class="post-nav">
     
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/vue1/" class="archive-post-link">
-            Vue2 起步
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/hexo1/" class="archive-post-link">
-            关于hexo与博客 待解决篇
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/laravel1/" class="archive-post-link">
-            laravel的常用命令行操作
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/vim1/" class="archive-post-link">
-            vim基础操作
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/28/mvc/" class="archive-post-link">
-            各后端框架的MVC架构
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-27
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/27/linux1/" class="archive-post-link">
-            Linux 进程
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-26
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/26/blog_years/" class="archive-post-link">
-            折腾了这么久，还是有自己的博客好
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-09
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/09/start/" class="archive-post-link">
-            start
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-09
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/04/09/hello-world/" class="archive-post-link">
-            Hello World
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
+      <a class="prev" href="/2017/04/28/vue1/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Vue2 起步</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>  
       </main>
@@ -499,6 +390,12 @@
     </div>
 
     
+  
+
+  
+  
+
+
 
 
     
