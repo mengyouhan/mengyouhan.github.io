@@ -196,6 +196,50 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2017/04/28/lavavel1/">laravel的常用命令行操作</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年4月28日
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h2 id="凡越强大的，起步就越难"><a href="#凡越强大的，起步就越难" class="headerlink" title="凡越强大的，起步就越难"></a>凡越强大的，起步就越难</h2><blockquote>
+<p>命令总比复制好，动键盘总比点鼠标+动键盘好</p>
+</blockquote>
+          <div class="read-more">
+            <a href="/2017/04/28/lavavel1/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2017/04/28/vim1/">vim基础操作</a>
         
       </h1>
@@ -214,10 +258,16 @@
       
         
         
+          
+        
 
         
-          <h2 id="稍微深入一下vim"><a href="#稍微深入一下vim" class="headerlink" title="稍微深入一下vim"></a>稍微深入一下vim</h2><p>很早以前就开始使用vi，但都是被动使用<br>比如<code>i</code> <code>:wq</code> <code>esc</code>这3个命令，基本操作上这3个命令就差不多了。<br>所以我在这个舒适区里待了很久。<br>先解释一下这3个命令<br><code>i</code>进入编辑模式<br><code>:wq</code>保存并退出<br><code>esc</code>退出编辑模式</p>
-
+          <h2 id="稍微深入一下vim"><a href="#稍微深入一下vim" class="headerlink" title="稍微深入一下vim"></a>稍微深入一下vim</h2><blockquote>
+<p>很早以前就开始使用vi，但都是被动使用<br>比如<code>i</code> <code>:wq</code> <code>esc</code>这3个命令，基本操作上这3个命令就差不多了。<br>所以我在这个舒适区里待了很久。</p>
+</blockquote>
+          <div class="read-more">
+            <a href="/2017/04/28/vim1/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -296,21 +346,16 @@
       
         
         
+          
+        
 
         
-          <h2 id="脱离终端"><a href="#脱离终端" class="headerlink" title="脱离终端"></a>脱离终端</h2><h3 id="进程的简单理解"><a href="#进程的简单理解" class="headerlink" title="进程的简单理解"></a>进程的简单理解</h3><p>进程 ：正在运行 执行的程序<br>并发 ：同时运行很多个进程<br>比如一个用户访问了我们的网站，那么至少会产生一个进程<br>比如Apache，好像是最多产生2000个Apache进程<br>所以并发量太大，超过了最大的进程量，服务器就可能死机<br>服务器的瓶颈 在于内存和CPU<br>内存不够 加点内存。<br>CPU不够多买几台服务器 做个集群（多台服务器）。<br>理解Linux下的进程管理，可以类比window下的任务管理器，里面也有进程管理， 结束进程（相信很多人都用过这个功能吧）</p>
-<p>ls 也会产生进程<br>只是执行速度太快，且执行完就马上消失了</p>
-<h3 id="查看进程命令："><a href="#查看进程命令：" class="headerlink" title="查看进程命令："></a>查看进程命令：</h3><pre><code>ps aux 
-ps -le
-</code></pre><p>两者都可查看进程，我一般使用<code>ps aux</code><br>进程 常驻在内存中</p>
-<p>top<br>父进程 </p>
-<p>没有正确退出<br>内存 硬盘 CPU 缓冲<br>top -b  -n  1 &gt;top.log</p>
-<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><p>单一<br>kill -l<br>kill -HUP 1222 平滑</p>
-<p>kill all<br>kill -1 2111 重启进程<br>kill -9 强制杀死进程<br>kill all -i  -9 httpd -i 交互式 问需不需要 -I</p>
-<p>root@umeng01:~# w<br> 12:00:01 up 3 days, 12:49,  3 users,  load average: 0.19, 0.16, 0.15<br>USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT<br>root     pts/3    125.71.195.146   10:52   37.00s  0.25s  0.21s mongo<br>root     pts/0    125.71.195.146   11:59    5.00s  0.04s  0.00s w<br>root     pts/4    125.71.195.146   10:56    1:03m  0.06s  0.06s -bash<br>root@umeng01:~# </p>
-<p>pkill -9 -t  pts/3<br>指定终端踢出 按照终端号</p>
-<p>放入后台<br>脱离终端</p>
-
+          <h2 id="脱离终端"><a href="#脱离终端" class="headerlink" title="脱离终端"></a>脱离终端</h2><h3 id="进程的简单理解"><a href="#进程的简单理解" class="headerlink" title="进程的简单理解"></a>进程的简单理解</h3><blockquote>
+<p>进程 ：正在运行 执行的程序<br>并发 ：同时运行很多个进程</p>
+</blockquote>
+          <div class="read-more">
+            <a href="/2017/04/27/linux1/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
