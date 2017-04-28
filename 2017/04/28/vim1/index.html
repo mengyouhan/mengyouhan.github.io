@@ -12,12 +12,12 @@
 
 
 
-  <meta name="description" content="各后端框架的MVC架构"/>
+  <meta name="description" content="vim基础操作"/>
 
 
 
 
-  <meta name="keywords" content="mvc.all," />
+  <meta name="keywords" content="vim," />
 
 
 
@@ -31,20 +31,20 @@
 
 
 
-<link rel="canonical" href="mengyouhan.github.io/2017/04/28/mvc/"/>
+<link rel="canonical" href="mengyouhan.github.io/2017/04/28/vim1/"/>
 
 
-<meta name="description" content="mvc 各层的意义 M层，即model的简写。作用：与数据库进行交互，之后的相关话题用mvc.m标签表示">
-<meta name="keywords" content="mvc.all">
+<meta name="description" content="稍微深入一下vim很早以前就开始使用vi，但都是被动使用比如i :wq esc这3个命令，基本操作上这3个命令就差不多了。所以我在这个舒适区里待了很久。先解释一下这3个命令i进入编辑模式:wq保存并退出esc退出编辑模式">
+<meta name="keywords" content="vim">
 <meta property="og:type" content="article">
-<meta property="og:title" content="各后端框架的MVC架构">
-<meta property="og:url" content="mengyouhan.github.io/2017/04/28/mvc/index.html">
+<meta property="og:title" content="vim基础操作">
+<meta property="og:url" content="mengyouhan.github.io/2017/04/28/vim1/index.html">
 <meta property="og:site_name" content="mengyouhan">
-<meta property="og:description" content="mvc 各层的意义 M层，即model的简写。作用：与数据库进行交互，之后的相关话题用mvc.m标签表示">
-<meta property="og:updated_time" content="2017-04-28T11:48:40.000Z">
+<meta property="og:description" content="稍微深入一下vim很早以前就开始使用vi，但都是被动使用比如i :wq esc这3个命令，基本操作上这3个命令就差不多了。所以我在这个舒适区里待了很久。先解释一下这3个命令i进入编辑模式:wq保存并退出esc退出编辑模式">
+<meta property="og:updated_time" content="2017-04-28T11:48:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="各后端框架的MVC架构">
-<meta name="twitter:description" content="mvc 各层的意义 M层，即model的简写。作用：与数据库进行交互，之后的相关话题用mvc.m标签表示">
+<meta name="twitter:title" content="vim基础操作">
+<meta name="twitter:description" content="稍微深入一下vim很早以前就开始使用vi，但都是被动使用比如i :wq esc这3个命令，基本操作上这3个命令就差不多了。所以我在这个舒适区里待了很久。先解释一下这3个命令i进入编辑模式:wq保存并退出esc退出编辑模式">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
@@ -73,7 +73,7 @@
 
 
 
-    <title> 各后端框架的MVC架构 · mengyouhan </title>
+    <title> vim基础操作 · mengyouhan </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -198,7 +198,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          各后端框架的MVC架构
+          vim基础操作
         
       </h1>
 
@@ -214,23 +214,14 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mvc-各层的意义"><span class="toc-text">mvc 各层的意义</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#稍微深入一下vim"><span class="toc-text">稍微深入一下vim</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="mvc-各层的意义"><a href="#mvc-各层的意义" class="headerlink" title="mvc 各层的意义"></a>mvc 各层的意义</h3><blockquote>
-<p>M层，即model的简写。<br>作用：与数据库进行交互，之后的相关话题用<code>mvc.m</code>标签表示</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>C层，即controller的简写。<br>作用：控制器。之后的相关话题用<code>mvc.c</code>标签表示</p>
-<p>V层，即view的简写。<br>作用：视图层，前端展示，各个框架有自己的模板渲染引擎。之后的相关话题用<code>mvc.v</code>标签表示</p>
-</blockquote>
-<p>最关键的是理解数据流向<br>路由 控制器 模型 控制器 视图<br>随着前端工程化，后端的一部分功能转移到前端，比较流行的是<br>后端提供API，前端处理逻辑 Vue<br>后端就变成<br>控制器 模型 控制器</p>
-<p>使用Vue，并不代表要一定要做成spa应用，可以简单的代替jq    </p>
+        <h2 id="稍微深入一下vim"><a href="#稍微深入一下vim" class="headerlink" title="稍微深入一下vim"></a>稍微深入一下vim</h2><p>很早以前就开始使用vi，但都是被动使用<br>比如<code>i</code> <code>:wq</code> <code>esc</code>这3个命令，基本操作上这3个命令就差不多了。<br>所以我在这个舒适区里待了很久。<br>先解释一下这3个命令<br><code>i</code>进入编辑模式<br><code>:wq</code>保存并退出<br><code>esc</code>退出编辑模式</p>
 
       
     </div>
@@ -250,7 +241,7 @@
     </p>
     <p class="copyright-item">
       <span>链接: </span>
-      <a href="mengyouhan.github.io/2017/04/28/mvc/">mengyouhan.github.io/2017/04/28/mvc/</a>
+      <a href="mengyouhan.github.io/2017/04/28/vim1/">mengyouhan.github.io/2017/04/28/vim1/</a>
     </p>
 
     <p class="copyright-item lincese">
@@ -288,7 +279,7 @@
         
           <div class="post-tags">
             
-              <a href="/tags/mvc-all/">mvc.all</a>
+              <a href="/tags/vim/">vim</a>
             
           </div>
         
@@ -296,18 +287,12 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2017/04/26/blog_years/">
+      <a class="prev" href="/2017/04/28/mvc/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">折腾了这么久，还是有自己的博客好</span>
+        <span class="prev-text nav-default">各后端框架的MVC架构</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
     
-    
-      <a class="next" href="/2017/04/28/vim1/">
-        <span class="next-text nav-default">vim基础操作</span>
-        <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
     
   </nav>
 
