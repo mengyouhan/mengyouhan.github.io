@@ -34,18 +34,18 @@
 <link rel="canonical" href="mengyouhan.github.io/2017/04/29/测试七牛图片服务/"/>
 
 
-<meta name="description" content="wlop 大大">
+<meta name="description" content="wlop 大大  var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;http://devtest.qiniudn.com/若能绽放光芒.mp4&quot;,&quot;pic&quot;:&quot;http://">
 <meta name="keywords" content="linux,mooc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="想学习的慕课">
 <meta property="og:url" content="mengyouhan.github.io/2017/04/29/测试七牛图片服务/index.html">
 <meta property="og:site_name" content="mengyouhan">
-<meta property="og:description" content="wlop 大大">
+<meta property="og:description" content="wlop 大大  var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;http://devtest.qiniudn.com/若能绽放光芒.mp4&quot;,&quot;pic&quot;:&quot;http://">
 <meta property="og:image" content="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg">
-<meta property="og:updated_time" content="2017-04-29T06:42:57.000Z">
+<meta property="og:updated_time" content="2017-04-29T06:49:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="想学习的慕课">
-<meta name="twitter:description" content="wlop 大大">
+<meta name="twitter:description" content="wlop 大大  var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;http://devtest.qiniudn.com/若能绽放光芒.mp4&quot;,&quot;pic&quot;:&quot;http://">
 <meta name="twitter:image" content="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg">
 
 
@@ -216,12 +216,40 @@
 
     <div class="post-content">
       
-        <blockquote>
+        <script src="/assets/js/DPlayer.min.js"> </script><blockquote>
 <p>wlop 大大</p>
 </blockquote>
-<video width="480" height="320" controls><br><source src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4"><br></video>
+<div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo","addition":["https://dplayer.daoapp.io/bilibili?aid=4157142"]}});</script>
+<blockquote>
+<p>js</p>
+</blockquote>
 
-
+<div id="player1" class="dplayer"></div>
+<script src="dist/DPlayer.min.js"></script><!-- use your path -->
+<script>
+var option = {
+    element: document.getElementById('player1'),                       // Optional, player element
+    autoplay: false,                                                   // Optional, autoplay video, not supported by mobile browsers
+    theme: '#FADFA3',                                                  // Optional, theme color, default: #b7daff
+    loop: true,                                                        // Optional, loop play music, default: true
+    lang: 'zh',                                                        // Optional, language, `zh` for Chinese, `en` for English, default: Navigator language
+    screenshot: true,                                                  // Optional, enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin
+    hotkey: true,                                                      // Optional, binding hot key, including left right and Space, default: true
+    preload: 'auto',                                                   // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    video: {                                                           // Required, video info
+        url: '若能绽放光芒.mp4',                                         // Required, video url
+        pic: '若能绽放光芒.png'                                          // Optional, music picture
+    },
+    danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku
+        id: '9E2E3368B56CDBB4',                                        // Required, danmaku id, NOTICE: it must be unique, can not use these in your new player: `https://dplayer.daoapp.io/list`
+        api: 'https://dplayer.daoapp.io/',                             // Required, danmaku api
+        token: 'tokendemo',                                            // Optional, danmaku token for api
+        maximum: 1000                                                  // Optional, maximum quantity of danmaku
+    addition: ['https://dplayer.daoapp.io/bilibili?aid=4157142']   // Optional, additional danmaku, see: `Bilibili 弹幕支持`
+    }
+}
+var dp = new DPlayer(option);
+</script>
 
 <a id="more"></a>
 <p><img src="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg" alt="pandas sort"></p>
