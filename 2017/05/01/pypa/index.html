@@ -12,12 +12,12 @@
 
 
 
-  <meta name="description" content="dplayer 在hexo中插入视频"/>
+  <meta name="description" content="爬虫的路(总)"/>
 
 
 
 
-  <meta name="keywords" content="hexo,video," />
+  <meta name="keywords" content="python,爬虫," />
 
 
 
@@ -31,22 +31,20 @@
 
 
 
-<link rel="canonical" href="mengyouhan.github.io/2017/04/29/hexo2/"/>
+<link rel="canonical" href="mengyouhan.github.io/2017/05/01/pypa/"/>
 
 
-<meta name="description" content="hexo-tag-dplayer github 地址">
-<meta name="keywords" content="hexo,video">
+<meta name="description" content="有些路回首时，已经走了  编辑器 用bs4select 不好用 nth 不支持lxml 封装 os 学会保存到本地文件读写 动态网页 下载漫画su 微博 服务器异地登录的话 要手滑验证码cookie那时候还不会数据库每分钟执行一次 查看最新微博用一个txt文件来缓存信息 到后来TXT的读写格式都不是很好用 每次爬虫还不能断断了数据就没了就使用了mongodb 爬 总会有各种意外 互虐意外 t">
+<meta name="keywords" content="python,爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dplayer 在hexo中插入视频">
-<meta property="og:url" content="mengyouhan.github.io/2017/04/29/hexo2/index.html">
+<meta property="og:title" content="爬虫的路(总)">
+<meta property="og:url" content="mengyouhan.github.io/2017/05/01/pypa/index.html">
 <meta property="og:site_name" content="mengyouhan">
-<meta property="og:description" content="hexo-tag-dplayer github 地址">
-<meta property="og:image" content="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg">
-<meta property="og:updated_time" content="2017-04-29T07:22:49.000Z">
+<meta property="og:description" content="有些路回首时，已经走了  编辑器 用bs4select 不好用 nth 不支持lxml 封装 os 学会保存到本地文件读写 动态网页 下载漫画su 微博 服务器异地登录的话 要手滑验证码cookie那时候还不会数据库每分钟执行一次 查看最新微博用一个txt文件来缓存信息 到后来TXT的读写格式都不是很好用 每次爬虫还不能断断了数据就没了就使用了mongodb 爬 总会有各种意外 互虐意外 t">
+<meta property="og:updated_time" content="2017-05-01T04:20:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dplayer 在hexo中插入视频">
-<meta name="twitter:description" content="hexo-tag-dplayer github 地址">
-<meta name="twitter:image" content="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg">
+<meta name="twitter:title" content="爬虫的路(总)">
+<meta name="twitter:description" content="有些路回首时，已经走了  编辑器 用bs4select 不好用 nth 不支持lxml 封装 os 学会保存到本地文件读写 动态网页 下载漫画su 微博 服务器异地登录的话 要手滑验证码cookie那时候还不会数据库每分钟执行一次 查看最新微博用一个txt文件来缓存信息 到后来TXT的读写格式都不是很好用 每次爬虫还不能断断了数据就没了就使用了mongodb 爬 总会有各种意外 互虐意外 t">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
@@ -75,7 +73,7 @@
 
 
 
-    <title> dplayer 在hexo中插入视频 · mengyouhan </title>
+    <title> 爬虫的路(总) · mengyouhan </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -200,13 +198,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          dplayer 在hexo中插入视频
+          爬虫的路(总)
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2017年4月29日
+          2017年5月1日
         </span>
       </div>
     </header>
@@ -217,11 +215,28 @@
     <div class="post-content">
       
         <script src="/assets/js/DPlayer.min.js"> </script><blockquote>
-<p><a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="external">hexo-tag-dplayer github 地址</a></p>
+<p> 有些路回首时，已经走了</p>
 </blockquote>
-<a id="more"></a>
-<p>hexo的项目文件夹下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//安装</div><div class="line">npm install hexo-tag-dplayer --save</div><div class="line">//使用</div><div class="line">&#123;% dplayer key=value ... %&#125;</div><div class="line">//例子</div><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;addition=https://dplayer.daoapp.io/bilibili?aid=4157142&quot; &quot;api=http://dplayer.daoapp.io&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="http://op5p4i8dh.bkt.clouddn.com/sort%E5%AE%98%E6%96%B9%E8%AF%B4%E6%98%8E-1024x275.jpg" alt="pandas sort"></p>
+<p>编辑器</p>
+<p>用bs4<br>select</p>
+<p>不好用 nth 不支持<br>lxml 封装</p>
+<p>os</p>
+<p>学会保存到本地<br>文件读写</p>
+<p>动态网页 下载漫画<br>su</p>
+<p>微博 服务器<br>异地登录的话 要手滑验证码<br>cookie<br>那时候还不会数据库<br>每分钟执行一次 查看最新微博<br>用一个txt文件来缓存信息</p>
+<p>到后来<br>TXT的读写<br>格式都不是很好用</p>
+<p>每次爬虫还不能断<br>断了数据就没了<br>就使用了mongodb</p>
+<p>爬 总会有各种意外 互虐意外 try<br>虽然存到了数据库里面<br>但怎么样解决 爬取过的就不要再爬了呢</p>
+<p>后来我就 没爬过的设置成 status——0 给爬过的为1</p>
+<p>即使爬虫断了 下次直接重新运行再运行一下爬虫就可以了<br>不用再做其他的<br>find({‘status’:0})</p>
+<p>当爬取的数据有点多，一时半会爬不完<br>电脑一直开着不好，晚上12点会断电<br>本地运行爬虫就不太合适了，<br>于是我在服务器上运行<br>但是我是通过ssh连接到服务器了<br>一旦shh断开<br>我的爬虫也就停止了<br>和本机上没有什么区别<br>我知道了有定时任务这个东西<br>我真实个天才<br>每3分钟运行一次<br>一旦开始运行<br>取消定时任务<br>后来我有发现 还是经常断<br>而且每次这样操作台麻烦了<br>我又发现了 nohup<br>其实我早就知道了 nohup的<br>只是我当时用过没有生效<br>现在我才知道 当时是因为当时没有在后面加 &amp;<br>坑啊<br>走了这么久的弯路<br>使用 pstree也可以很方便的查看进程状态</p>
+<p>即使这样<br>还是会发现还是要断<br>py error<br>比以前要好</p>
+<p>我知道有个叫supers<br>的进程守护<br>这就是我下一步要做的事情</p>
+<p>还有个问题<br>效率<br>有些程序 即使我不使用多线程 也没到多久就封IP了<br>所以还是要先解决封ip问题<br>2个思路<br>1.自己维护一个代理池<br>爬虫没有再提升，这是很大一部分原因<br>2，使用多台机器<br>我做过的就是<br>给爬的数据index 比如我有3台机器<br>我就把前1/3的分给1台机器<br>分开运行 和在一台机器上运行 没什么区别<br>我还是使用着time.sleep<br>不断探索着 保持着不被封IP</p>
+<p>最近我要爬的数据有60多万个网页<br>而且在国内被墙的<br>而我只有一台国外的服务器<br>使用着time.sleep<br>和 断<br>现在才爬到30多万</p>
+<p>现在要做的就是 IP池 最好还有国外的 GitHub上有一个 可以先去看看<br>分布式 其实我已经做了分布式<br>但是 用队列是一个更好的方式</p>
+<p>IP问题解决了 多进程 多线程 协程才有意义</p>
+<p>redis 解决了<br>super 解决了 才不用受</p>
 
       
     </div>
@@ -241,7 +256,7 @@
     </p>
     <p class="copyright-item">
       <span>链接: </span>
-      <a href="mengyouhan.github.io/2017/04/29/hexo2/">mengyouhan.github.io/2017/04/29/hexo2/</a>
+      <a href="mengyouhan.github.io/2017/05/01/pypa/">mengyouhan.github.io/2017/05/01/pypa/</a>
     </p>
 
     <p class="copyright-item lincese">
@@ -279,9 +294,9 @@
         
           <div class="post-tags">
             
-              <a href="/tags/hexo/">hexo</a>
+              <a href="/tags/python/">python</a>
             
-              <a href="/tags/video/">video</a>
+              <a href="/tags/爬虫/">爬虫</a>
             
           </div>
         
@@ -289,15 +304,15 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2017/04/28/py_php/">
+      <a class="prev" href="/2017/05/01/next1/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">语言学习框架与项目</span>
+        <span class="prev-text nav-default">下一阶段</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
     
     
-      <a class="next" href="/2017/04/30/do1/">
-        <span class="next-text nav-default">4/30/2017 申请了小程序开发者</span>
+      <a class="next" href="/2017/05/01/pypa1/">
+        <span class="next-text nav-default">爬虫的路（起步）</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
