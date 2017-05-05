@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="爬虫的路（3）"/>
+
+
+
+
+  <meta name="keywords" content="python,爬虫," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="mengyouhan">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.3.x" />
+
+
+
+<link rel="canonical" href="mengyouhan.github.io/2017/05/05/pypa3/"/>
+
+
+<meta name="description" content="不是工具不好，只是不适合我所以，我要写自己的工具包  要对人友好，而不是对机器友好">
+<meta name="keywords" content="python,爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫的路（3）">
+<meta property="og:url" content="mengyouhan.github.io/2017/05/05/pypa3/index.html">
+<meta property="og:site_name" content="mengyouhan">
+<meta property="og:description" content="不是工具不好，只是不适合我所以，我要写自己的工具包  要对人友好，而不是对机器友好">
+<meta property="og:updated_time" content="2017-05-05T10:47:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爬虫的路（3）">
+<meta name="twitter:description" content="不是工具不好，只是不适合我所以，我要写自己的工具包  要对人友好，而不是对机器友好">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> 爬虫的路（3） · mengyouhan </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">mengyouhan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            简线
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            寻他
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            无法归
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            无我
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">mengyouhan</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              简线
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              寻他
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              无法归
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              无我
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input" />
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          爬虫的路（3）
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年5月5日
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <script src="/assets/js/DPlayer.min.js"> </script><blockquote>
+<p> 不是工具不好，只是不适合我<br>所以，我要写自己的工具包</p>
+</blockquote>
+<p>要对人友好，而不是对机器友好<br><a id="more"></a><br>理想的爬虫<br>只输入选择器，变量名<br>就完成爬取和存入数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">arr_select = [</div><div class="line">    (&apos;li&apos;,&apos;#s_position_list &gt; ul &gt; li&apos;,&apos;loop&apos;)</div><div class="line">]</div><div class="line"></div><div class="line">dtail_select = [</div><div class="line">    (&apos;need_job&apos;,&apos;div.list_item_top &gt; div.position &gt; div.p_top &gt; a &gt; h2&apos;,&apos;t&apos;),</div><div class="line">    (&apos;salary&apos;,&apos;div.list_item_top &gt; div.position &gt; div.p_bot &gt; div &gt; span&apos;,&apos;t&apos;),</div><div class="line">    (&apos;company&apos;,&apos;div.list_item_top div.company  div.company_name &gt; a&apos;,&#123;&apos;name&apos;:&apos;t&apos;,&apos;url&apos;:&apos;href&apos;&#125;)</div><div class="line">]</div><div class="line"></div><div class="line">lagou = Sloop(html=xhtml)</div><div class="line"># lagou.wb_data()</div><div class="line">r = lagou.to_dict(arr_select)</div><div class="line">for index,x in enumerate(r[&apos;li&apos;]):</div><div class="line">    print(Sloop(shtml=str(r[&apos;li&apos;][index])).to_dict(dtail_select))</div></pre></td></tr></table></figure>
+<p>比如我只需要上面这几行就完成，对拉勾一个列表页的信息爬取，输出为下。<br>字典的形式，甚至可以直接保存在数据库中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&apos;salary&apos;: &apos;16k-30k&apos;, &apos;company&apos;: &#123;&apos;name&apos;: &apos;新网银行&apos;, &apos;url&apos;: &apos;https://www.lagou.com/gongsi/166084.html&apos;&#125;, &apos;need_job&apos;: &apos;信息科技审计&apos;&#125;</div><div class="line">&#123;&apos;salary&apos;: &apos;15k-30k&apos;, &apos;company&apos;: &#123;&apos;name&apos;: &apos;新网银行&apos;, &apos;url&apos;: &apos;https://www.lagou.com/gongsi/166084.html&apos;&#125;, &apos;need_job&apos;: &apos;UI高级设计师&apos;&#125;</div></pre></td></tr></table></figure></p>
+<p>当然还需要很多改进的地方<br>比如维持一个爬取队列，<br>上面的company的url加入队列</p>
+<p>Sloop类的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">class Sloop():</div><div class="line">    def __init__(self,url=&apos;&apos;,shtml=&apos;&apos;,html=&apos;&apos;):</div><div class="line">        self.url=url</div><div class="line">        self.shtml=shtml</div><div class="line">        self.html = html</div><div class="line">    def wb_data(self):</div><div class="line">        # request</div><div class="line">        wb_data = requests.get(self.url)</div><div class="line">        # 不返回乱码</div><div class="line">        wb_data.encoding = wb_data.apparent_encoding</div><div class="line">        self.html = wb_data.text</div><div class="line">        return self.html</div><div class="line"></div><div class="line"></div><div class="line">    def soup_parse(self,select=&apos;&apos;,attrib=&apos;&apos;):</div><div class="line">        raw = &apos;&apos;</div><div class="line">        if self.shtml==&apos;&apos;:</div><div class="line">            raw = &quot;BeautifulSoup(self.html, &apos;lxml&apos;)&quot;</div><div class="line">        else:</div><div class="line">            raw = &quot;BeautifulSoup(self.shtml, &apos;lxml&apos;)&quot;</div><div class="line">        try:</div><div class="line">            if attrib==&apos;t&apos;:</div><div class="line">                selected = eval(&quot;&#123;&#125;.select(select)[0].get_text()&quot;.format(raw))</div><div class="line">            elif attrib==&apos;loop&apos;:</div><div class="line">                selected = eval(&quot;&#123;&#125;.select(select)&quot;.format(raw))</div><div class="line">            else:</div><div class="line">                selected = eval(&quot;&#123;&#125;.select(select)[0][str(attrib)]&quot;.format(raw))</div><div class="line">            # print(selected)</div><div class="line">            return selected</div><div class="line">        except:</div><div class="line">            # 获取函数名</div><div class="line">            pass</div><div class="line"></div><div class="line">    def to_dict(self,arr_select):</div><div class="line">        data = &#123;&#125;</div><div class="line">        for i in arr_select:</div><div class="line">            if isinstance(i[2],dict):</div><div class="line">                attrib_dict = i[2].copy()</div><div class="line">                for k in attrib_dict.keys():</div><div class="line">                    if attrib_dict[k]==&apos;loop&apos;:</div><div class="line">                        # data[i[0]] = self.xpath_parse(select=i[1],attrib=i[2])</div><div class="line">                        # eval(&quot;self.&#123;&#125;_parse(select=&apos;&apos;,attrib=&apos;&apos;)&quot;.format(self.engine))</div><div class="line">                        attrib_dict[k] = self.soup_parse(select=i[1],attrib=attrib_dict[k])</div><div class="line">                    elif attrib_dict[k]==&apos;t&apos;:</div><div class="line">                        attrib_dict[k] = self.soup_parse(select=i[1],attrib=attrib_dict[k])</div><div class="line">                    else:</div><div class="line">                        attrib_dict[k] = self.soup_parse(select=i[1],attrib=attrib_dict[k])</div><div class="line">                    data[i[0]] =   attrib_dict</div><div class="line">            else:</div><div class="line">                if i[2]==&apos;loop&apos;:</div><div class="line">                    # data[i[0]] = self.xpath_parse(select=i[1],attrib=i[2])</div><div class="line">                    # eval(&quot;self.&#123;&#125;_parse(select=&apos;&apos;,attrib=&apos;&apos;)&quot;.format(self.engine))</div><div class="line">                    data[i[0]] = self.soup_parse(select=i[1],attrib=i[2])</div><div class="line">                elif i[2]==&apos;t&apos;:</div><div class="line">                    data[i[0]] = self.soup_parse(select=i[1],attrib=i[2])</div><div class="line">                else:</div><div class="line">                    data[i[0]] = self.soup_parse(select=i[1],attrib=i[2])</div><div class="line">        return data</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>mengyouhan</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="mengyouhan.github.io">mengyouhan.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="mengyouhan.github.io/2017/05/05/pypa3/">mengyouhan.github.io/2017/05/05/pypa3/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/python/">python</a>
+            
+              <a href="/tags/爬虫/">爬虫</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/05/04/2017-05-04/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default"></span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/mengyouhan" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/megyouhan/answers" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">mengyouhan</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.3.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.3.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            Read more..
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.3.x"></script>
+
+  </body>
+</html>
