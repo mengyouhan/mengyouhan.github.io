@@ -41,7 +41,7 @@
 <meta property="og:url" content="mengyouhan.github.io/2017/05/01/pypa1/index.html">
 <meta property="og:site_name" content="mengyouhan">
 <meta property="og:description" content="刚开始，什么都没有后来就有了一切">
-<meta property="og:updated_time" content="2017-05-05T10:49:11.000Z">
+<meta property="og:updated_time" content="2017-05-05T11:07:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫的路（起步）">
 <meta name="twitter:description" content="刚开始，什么都没有后来就有了一切">
@@ -215,8 +215,9 @@
     <div class="post-content">
       
         <script src="/assets/js/DPlayer.min.js"> </script><blockquote>
-<p> 刚开始，什么都没有<br>后来就有了一切<br><a id="more"></a></p>
+<p> 刚开始，什么都没有<br>后来就有了一切</p>
 </blockquote>
+<a id="more"></a>
 <p>编辑器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">ctr+1(Pycharm编辑器)create class如何调出</div></pre></td></tr></table></figure></p>
 <p>今天时间属于爬虫<br>刚开始requests<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">range(2,40,1)</div><div class="line"></div><div class="line">headers = &#123;&#125;</div><div class="line">requests.get(url_cookie,headers=headers)   .content  .text  .json</div></pre></td></tr></table></figure></p>
 <p>用bs4<br>select<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">soup = BeautifulSoup(wb_data.text,&apos;lxml&apos;)</div><div class="line">imgs = soup.select(&apos;ul.user-list &gt; li &gt; a &gt; img&apos;)</div><div class="line"></div><div class="line">all_a = Soup.find(&apos;div&apos;, class_=&apos;all&apos;).find_all(&apos;a&apos;)  ##意思是先查找 class为 all 的div标签，然后查找所有的&lt;a&gt;标签。</div><div class="line">max_span = html_Soup.find_all(&apos;span&apos;)[10].get_text()  ##查找所有的&lt;span&gt;标签获取第十个的&lt;span&gt;标签中的文本也就是最后一个</div><div class="line">img_url = img_Soup.find(&apos;div&apos;, class_=&apos;main-image&apos;).find(&apos;img&apos;)[&apos;src&apos;]  ##这三行上面都说过啦不解释了哦</div><div class="line"></div><div class="line">link = soup.find(&apos;a&apos;,href=&apos;http://live.bilibili.com&apos;)</div><div class="line">print(link.name,link[&apos;href&apos;],link.get_text())</div><div class="line"></div><div class="line"></div><div class="line">ather = i.get(&apos;alt&apos;)</div><div class="line">  img_url = i.get(&apos;src&apos;)</div><div class="line">  path = str(ather).strip()</div></pre></td></tr></table></figure></p>
