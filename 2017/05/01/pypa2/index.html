@@ -34,17 +34,17 @@
 <link rel="canonical" href="mengyouhan.github.io/2017/05/01/pypa2/"/>
 
 
-<meta name="description" content="刚开始，什么都没有后来就有了一切  12345678910111213headers = &amp;#123;&amp;apos;User-Agent&amp;apos;: UA&amp;#125;yuanwen_fc = yuanwen.split(&amp;apos;。&amp;apos;)url[:-4]+&amp;apos;mp3&amp;apos;str11 = &amp;apos;&amp;apos;&amp;apos;-------&amp;#123;y&amp;#125;  [">
+<meta name="description" content="刚开始，什么都没有后来就有了一切">
 <meta name="keywords" content="python,爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬虫的路（2）">
 <meta property="og:url" content="mengyouhan.github.io/2017/05/01/pypa2/index.html">
 <meta property="og:site_name" content="mengyouhan">
-<meta property="og:description" content="刚开始，什么都没有后来就有了一切  12345678910111213headers = &amp;#123;&amp;apos;User-Agent&amp;apos;: UA&amp;#125;yuanwen_fc = yuanwen.split(&amp;apos;。&amp;apos;)url[:-4]+&amp;apos;mp3&amp;apos;str11 = &amp;apos;&amp;apos;&amp;apos;-------&amp;#123;y&amp;#125;  [">
-<meta property="og:updated_time" content="2017-05-01T05:21:28.000Z">
+<meta property="og:description" content="刚开始，什么都没有后来就有了一切">
+<meta property="og:updated_time" content="2017-05-05T10:49:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫的路（2）">
-<meta name="twitter:description" content="刚开始，什么都没有后来就有了一切  12345678910111213headers = &amp;#123;&amp;apos;User-Agent&amp;apos;: UA&amp;#125;yuanwen_fc = yuanwen.split(&amp;apos;。&amp;apos;)url[:-4]+&amp;apos;mp3&amp;apos;str11 = &amp;apos;&amp;apos;&amp;apos;-------&amp;#123;y&amp;#125;  [">
+<meta name="twitter:description" content="刚开始，什么都没有后来就有了一切">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
@@ -215,7 +215,7 @@
     <div class="post-content">
       
         <script src="/assets/js/DPlayer.min.js"> </script><blockquote>
-<p> 刚开始，什么都没有<br>后来就有了一切</p>
+<p> 刚开始，什么都没有<br>后来就有了一切<br><a id="more"></a></p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">headers = &#123;&apos;User-Agent&apos;: UA&#125;</div><div class="line"></div><div class="line">yuanwen_fc = yuanwen.split(&apos;。&apos;)</div><div class="line">url[:-4]+&apos;mp3&apos;</div><div class="line"></div><div class="line"></div><div class="line">str11 = &apos;&apos;&apos;</div><div class="line">-------</div><div class="line">&#123;y&#125;  [沪江小D](&#123;hj&#125;) [単語林](&#123;tangorin&#125;) [jisho](&#123;jisho&#125;) [goo辞书](&#123;goo&#125;) [语调发音](&#123;ojad&#125;) [例句](&#123;lizi&#125;)&lt;br&gt;</div><div class="line">``&#123;chaxun&#125;``</div><div class="line"></div><div class="line">    &apos;&apos;&apos;.format(y=y, hj=hj,tangorin = tangorin,jisho =jisho,goo=goo,ojad=ojad,lizi = lizi,chaxun=chaxun)</div><div class="line">    f.write(str11 + &apos;\n&apos;)</div></pre></td></tr></table></figure>
 <p>bs4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">面向对象尝试</div><div class="line">from bs4 import BeautifulSoup</div><div class="line">import requests,os</div><div class="line"></div><div class="line">class SpiderHTML(object):</div><div class="line">    # 打开页面</div><div class="line">    def getUrl(self,url):</div><div class="line">        wb_data = requests.get(url)</div><div class="line">        return BeautifulSoup(wb_data.text, &apos;lxml&apos;)</div><div class="line"></div><div class="line"></div><div class="line">    # 传入图片地址，文件名，保存单张图片</div><div class="line">    def saveImg(self, imageURL, fileName):</div><div class="line">        img = requests.get(imageURL)</div><div class="line">        f = open(fileName, &apos;wb&apos;)  ##写入多媒体文件必须要 b 这个参数！！必须要！！</div><div class="line">        f.write(img.content)  ##多媒体文件要是用conctent哦！</div><div class="line">        f.close()</div><div class="line"></div><div class="line"></div><div class="line">实例化</div><div class="line">pider = doubanDetil(url)</div><div class="line"></div><div class="line"></div><div class="line">select1 = &quot;#overflowbox  font[size=3]&quot;</div><div class="line"></div><div class="line"></div><div class="line">    a1 = [x.get_text() for x in soup.select(select1)]</div><div class="line"></div><div class="line">    for x in soup.find_all(size=&quot;3&quot;):</div><div class="line">            a2.append(x.next_sibling.get_text())</div></pre></td></tr></table></figure></p>
